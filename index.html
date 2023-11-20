@@ -5,39 +5,55 @@
     <title>Title</title>
     <link href="asset/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="asset/css/css.css" rel="stylesheet">
+    <link rel="stylesheet" href="asset/fontawesome-free-6.4.2-web/css/all.css">
+
 
 </head>
 <body>
 
-<header class="p-2">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white d-flex flex-wrap gap-3">
+<header class="position-fixed vw-100 bg-white" style="z-index: 10;">
+    <section class="container">
+    <nav class="navbar navbar-expand-lg navbar-light d-flex flex-wrap gap-3">
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler"
                 data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div>
+            <span style="font-size: 20px;font-weight: 700;color: var(--primary-color-light)">VISION</span>
+            <span style="font-size: 15px;font-weight: 700">TECH</span>
+        </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+<!--                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <div class="bg-white p-1" style="border-radius: 20px">
-                    <i class="fa fa-search p-1"></i>
+                <div class="bg-white p-1 d-flex p-3 justify-content-center align-items-center" style="border-radius: 20px;height: 40px ;border: var(--primary-color-light) solid 1px;">
+
                     <input class="form-control form-input border-0" placeholder="Search anything..." type="text">
-                    <span class="left-pan"><i class="fa fa-microphone p-1"></i></span>
+                    <span class="left-pan">
+                       <i class="fa-solid fa-magnifying-glass" style="color: #705ec9;"></i>
+                    </span>
                 </div>
             </form>
         </div>
-        <div>
-            <h1>2</h1>
+        <div class="">
+            <div id="cart-icon" class="rounded-circle p-3">
+                <div class="position-absolute bg-white rounded-circle d-flex align-items-center justify-content-center shadow p-2 m-0" style="top: 0px;right:0px;margin: auto">
+                    <h6 id="booking-count" class="" style="margin-right:5px;margin-top: 0px;margin-bottom: 0px;margin-left: 5px"><b>0</b></h6>
+                </div>
+
+                <svg class="shadow rounded-circle" style="height: 40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M96,216a16,16,0,1,1-16-16A16,16,0,0,1,96,216Zm88-16a16,16,0,1,0,16,16A16,16,0,0,0,184,200ZM228.1,67.2a8.1,8.1,0,0,0-6.4-3.2H48.3L40.2,35.6A16.1,16.1,0,0,0,24.8,24H8A8,8,0,0,0,8,40H24.8l9.8,34.1v.2L61,166.6A24.1,24.1,0,0,0,84.1,184h95.8A24.1,24.1,0,0,0,203,166.6l26.4-92.4A8,8,0,0,0,228.1,67.2Z" fill="var(--primary-color-light)"></path></svg>
+            </div>
         </div>
     </nav>
+    </section>
 </header>
 
 
-<main>
+<main id="main1">
     <section class="d-flex align-items-center bg-color">
         <section class="container mb-5 mt-5 ">
             <section class="w-100 d-flex flex-wrap flex-row position-relative align-items-center p-5">
@@ -281,12 +297,488 @@
         </section>
     </section>
 
+    <section id="view-cart" style="z-index: 10; top: 90px;right: 100px" class="col-lg-3 col-5 col-sm-5 p-3 bg-white rounded-3 shadow position-fixed">
+        <div class="">
+            <h5 class="mb-3"><a href="#!" class="text-body"><i
+                    class="fas fa-long-arrow-alt-left me-2"></i>Continue shopping</a></h5>
+            <hr>
 
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <p class="mb-1">Shopping cart</p>
+                    <p class="mb-0">You have 4 items in your cart</p>
+                </div>
+                <div>
+                    <p class="mb-0"><span class="text-muted">Sort by:</span> <a href="#!"
+                                                                                class="text-body">price <i class="fas fa-angle-down mt-1"></i></a></p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div>
+                                <img
+                                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                        class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                            </div>
+                            <div class="ms-3">
+                                <h5>Iphone 11 pro</h5>
+                                <p class="small mb-0">256GB, Navy Blue</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div style="width: 50px;">
+                                <h5 class="fw-normal mb-0">2</h5>
+                            </div>
+                            <div style="width: 80px;">
+                                <h5 class="mb-0">$900</h5>
+                            </div>
+                            <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div>
+                                <img
+                                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
+                                        class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                            </div>
+                            <div class="ms-3">
+                                <h5>Samsung galaxy Note 10 </h5>
+                                <p class="small mb-0">256GB, Navy Blue</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div style="width: 50px;">
+                                <h5 class="fw-normal mb-0">2</h5>
+                            </div>
+                            <div style="width: 80px;">
+                                <h5 class="mb-0">$900</h5>
+                            </div>
+                            <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div>
+                                <img
+                                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img3.webp"
+                                        class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                            </div>
+                            <div class="ms-3">
+                                <h5>Canon EOS M50</h5>
+                                <p class="small mb-0">Onyx Black</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div style="width: 50px;">
+                                <h5 class="fw-normal mb-0">1</h5>
+                            </div>
+                            <div style="width: 80px;">
+                                <h5 class="mb-0">$1199</h5>
+                            </div>
+                            <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3 mb-lg-0">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div>
+                                <img
+                                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img4.webp"
+                                        class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                            </div>
+                            <div class="ms-3">
+                                <h5>MacBook Pro</h5>
+                                <p class="small mb-0">1TB, Graphite</p>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div style="width: 50px;">
+                                <h5 class="fw-normal mb-0">1</h5>
+                            </div>
+                            <div style="width: 80px;">
+                                <h5 class="mb-0">$1799</h5>
+                            </div>
+                            <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" id="check-out-side" style="background-color: var(--primary-color-light)" class="btn btn-block btn-lg w-100 mt-2">
+                <div class="d-flex justify-content-between gap-3">
+                    <span style="color: #d1e7dd ; font-weight: 700">$4818.00</span>
+                    <span style="color: #d1e7dd ">Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
+                </div>
+            </button>
+        </div>
+    </section>
 </main>
 
-<footer>
+<main id="main2" class="p-5">
+    <section class="container">
+        <section class="h-100 h-custom" style="background-color: #eee;">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body p-4">
 
+                                <div class="row">
 
+                                    <div class="col-lg-7">
+                                        <h5 class="mb-3" id="continue">
+                                            <a class="text-body"><i class="fas fa-long-arrow-alt-left me-2"></i>Continue shopping</a></h5>
+                                        <hr>
+
+                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                            <div>
+                                                <p class="mb-1">Shopping cart</p>
+                                                <p class="mb-0">You have 4 items in your cart</p>
+                                            </div>
+                                            <div>
+                                                <p class="mb-0"><span class="text-muted">Sort by:</span> <a href="#!"
+                                                                                                            class="text-body">price <i class="fas fa-angle-down mt-1"></i></a></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div>
+                                                            <img
+                                                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                                                    class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                                                        </div>
+                                                        <div class="ms-3">
+                                                            <h5>Iphone 11 pro</h5>
+                                                            <p class="small mb-0">256GB, Navy Blue</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div style="width: 50px;">
+                                                            <h5 class="fw-normal mb-0">2</h5>
+                                                        </div>
+                                                        <div style="width: 80px;">
+                                                            <h5 class="mb-0">$900</h5>
+                                                        </div>
+                                                        <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div>
+                                                            <img
+                                                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
+                                                                    class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                                                        </div>
+                                                        <div class="ms-3">
+                                                            <h5>Samsung galaxy Note 10 </h5>
+                                                            <p class="small mb-0">256GB, Navy Blue</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div style="width: 50px;">
+                                                            <h5 class="fw-normal mb-0">2</h5>
+                                                        </div>
+                                                        <div style="width: 80px;">
+                                                            <h5 class="mb-0">$900</h5>
+                                                        </div>
+                                                        <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div>
+                                                            <img
+                                                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img3.webp"
+                                                                    class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                                                        </div>
+                                                        <div class="ms-3">
+                                                            <h5>Canon EOS M50</h5>
+                                                            <p class="small mb-0">Onyx Black</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div style="width: 50px;">
+                                                            <h5 class="fw-normal mb-0">1</h5>
+                                                        </div>
+                                                        <div style="width: 80px;">
+                                                            <h5 class="mb-0">$1199</h5>
+                                                        </div>
+                                                        <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-3 mb-lg-0">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div>
+                                                            <img
+                                                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img4.webp"
+                                                                    class="img-fluid rounded-3" alt="Shopping item" style="width: 65px;">
+                                                        </div>
+                                                        <div class="ms-3">
+                                                            <h5>MacBook Pro</h5>
+                                                            <p class="small mb-0">1TB, Graphite</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <div style="width: 50px;">
+                                                            <h5 class="fw-normal mb-0">1</h5>
+                                                        </div>
+                                                        <div style="width: 80px;">
+                                                            <h5 class="mb-0">$1799</h5>
+                                                        </div>
+                                                        <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-5">
+
+                                        <div class="card text-white rounded-3" style="background-color: var(--primary-color-light-2)">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                                    <h5 class="mb-0">Card details</h5>
+                                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                                                         class="img-fluid rounded-3" style="width: 45px;" alt="Avatar">
+                                                </div>
+
+                                                <p class="small mb-2">Card type</p>
+                                                <a href="#!" type="submit" class="text-white"><i
+                                                        class="fab fa-cc-mastercard fa-2x me-2"></i></a>
+                                                <a href="#!" type="submit" class="text-white"><i
+                                                        class="fab fa-cc-visa fa-2x me-2"></i></a>
+                                                <a href="#!" type="submit" class="text-white"><i
+                                                        class="fab fa-cc-amex fa-2x me-2"></i></a>
+                                                <a href="#!" type="submit" class="text-white"><i class="fab fa-cc-paypal fa-2x"></i></a>
+
+                                                <form class="mt-4">
+                                                    <div class="form-outline form-white mb-4">
+                                                        <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                                                               placeholder="Cardholder's Name" />
+                                                        <label class="form-label" for="typeName">Cardholder's Name</label>
+                                                    </div>
+
+                                                    <div class="form-outline form-white mb-4">
+                                                        <input type="text" id="typeText1" class="form-control form-control-lg" siez="17"
+                                                               placeholder="1234 5678 9012 3457" minlength="19" maxlength="19" />
+                                                        <label class="form-label" for="typeText">Card Number</label>
+                                                    </div>
+
+                                                    <div class="row mb-4">
+                                                        <div class="col-md-6">
+                                                            <div class="form-outline form-white">
+                                                                <input type="text" id="typeExp" class="form-control form-control-lg"
+                                                                       placeholder="MM/YYYY" size="7" id="exp" minlength="7" maxlength="7" />
+                                                                <label class="form-label" for="typeExp">Expiration</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-outline form-white">
+                                                                <input type="password" id="typeText" class="form-control form-control-lg"
+                                                                       placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                                                                <label class="form-label" for="typeText">Cvv</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+
+                                                <hr class="my-4">
+
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="mb-2">Subtotal</p>
+                                                    <p class="mb-2">$4798.00</p>
+                                                </div>
+
+                                                <div class="d-flex justify-content-between">
+                                                    <p class="mb-2">Shipping</p>
+                                                    <p class="mb-2">$20.00</p>
+                                                </div>
+
+                                                <div class="d-flex justify-content-between mb-4">
+                                                    <p class="mb-2">Total(Incl. taxes)</p>
+                                                    <p class="mb-2">$4818.00</p>
+                                                </div>
+
+                                                <button type="button" style="background-color: var(--primary-color-light)" class="btn btn-block btn-lg">
+                                                    <div class="d-flex justify-content-between gap-3">
+                                                        <span style="color: #d1e7dd ; font-weight: 700">$4818.00</span>
+                                                        <span style="color: #d1e7dd ">Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
+                                                    </div>
+                                                </button>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+
+<footer class=" text-center text-lg-start bg-light text-muted" >
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div style="color: var(--primary-color-light)">
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>Company name
+                    </h6>
+                    <p>
+                        Here you can use rows and columns to organize your footer content. Lorem ipsum
+                        dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Products
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Angular</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">React</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Vue</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Laravel</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Useful links
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Pricing</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Settings</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Orders</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Help</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        info@example.com
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: var(--primary-color-light);color: var(--body-color)">
+        © 2023 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">VISION TECH.com</a>
+    </div>
+    <!-- Copyright -->
 </footer>
 <script src="asset/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
 <script src="asset/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.esm.js"></script>

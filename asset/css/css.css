@@ -10,7 +10,7 @@
     /*    ==== Colors =====*/
     --body-color: #FFF5F1;
     --primary-color-light: #622FCF;
-    --primary-color-light-2: #e0a792;
+    --primary-color-light-2: #2c2b34;
     --primary-color: #ffffff;
     --primary-text-color: #2d2738;
     --primary-text-color-light: #746f6f;
@@ -159,3 +159,7 @@
 .nav-category:nth-child(1) div:nth-child(1) div:nth-child(1){
     width: 100px;
 }*/
+
+#view-cart{
+    transition:  visibility 0.5s ease-in-out;
+}
